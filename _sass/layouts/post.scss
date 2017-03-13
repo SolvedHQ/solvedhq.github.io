@@ -1,0 +1,123 @@
+@import "../variables";
+
+$color-figure-text: #828282;
+$color-figure-border: lighten($color-figure-text, 40%);
+$color-figure-background: lighten($color-figure-text, 45%);
+
+.sb-Post {
+  max-width: $width-max;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.sb-Post-title {
+  font-size: 2.5rem;
+  margin-top: 4rem;
+}
+
+.sb-Post-meta {
+  margin-top: 1rem;
+  color: $color-text-muted;
+}
+
+.sb-Post-content {
+  line-height: 1.5rem;
+  margin: 2rem 0 4rem;
+
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre, ul, ol, dl, figure {
+    margin-bottom: 1rem;
+  }
+
+  img {
+    max-width: 100%;
+    vertical-align: middle;
+  }
+
+  figure > img {
+    display: block;
+  }
+
+  figcaption {
+    font-size: .5rem;
+  }
+
+  /**
+   * Lists
+   */
+  ul, ol {
+    margin-left: 2rem;
+  }
+
+  li {
+    > ul,
+    > ol {
+      margin-bottom: 0;
+    }
+  }
+
+  /**
+   * Headings
+   */
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+  }
+
+  /**
+   * Links
+   */
+  a {
+    color: $color-brand;
+    text-decoration: none;
+
+    &:visited {
+      color: darken($color-brand, 15%);
+    }
+
+    &:hover {
+      color: $color-text;
+      text-decoration: underline;
+    }
+  }
+
+  /**
+   * Blockquotes
+   */
+  blockquote {
+    color: $color-figure-text;
+    border-left: 4px solid $color-figure-border;
+    padding-left: 1rem;
+    font-size: 1.125rem;
+    letter-spacing: -1px;
+    font-style: italic;
+
+    > :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  /**
+   * Code formatting
+   */
+  pre,
+  code {
+    font-size: .8rem;
+    border: 1px solid $color-figure-border;
+    border-radius: 4px;
+    background-color: $color-figure-background;
+  }
+
+  code {
+    padding: 2px .25rem;
+  }
+
+  pre {
+    padding: .5rem .75rem;
+    overflow-x: auto;
+
+    > code {
+      border: 0;
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+}

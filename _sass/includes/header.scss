@@ -1,0 +1,84 @@
+@import "../variables";
+
+$background-color: $color-background;
+$contrast-color: white;
+
+.sb-Header {
+  background: $background-color;
+}
+
+.sb-Header-container {
+  display: flex;
+  align-items: center;
+  padding: .5rem $padding-global-min;
+  justify-content: space-between;
+  max-width: $width-max-wide;
+  margin: 0 auto;
+}
+
+.sb-Header-spacer {
+  flex: 1;
+}
+
+.sb-Header-logo {
+  color: $contrast-color;
+  text-decoration: none;
+
+  font-size: 1.875rem;
+  line-height: 1.875rem;
+  font-weight: 600;
+
+  > span {
+    font-style: normal;
+    font-weight: normal;
+  }
+}
+
+.sb-Header-nav {
+  position: relative;
+}
+
+.sb-Header-linkToggle {
+  display: none;
+}
+
+.sb-Header-links {
+  display: flex;
+}
+
+.sb-Header-link {
+  text-decoration: none;
+  display: block;
+  color: $contrast-color;
+
+  & + & {
+    margin-left: 1rem;
+  }
+}
+
+@media (max-width: $breakpoint-small) {
+  .sb-Header-linkToggle {
+    display: block;
+  }
+
+  .sb-Header-links {
+    display: none;
+    position: absolute;
+    right: -1rem;
+    background: #414345;
+    border-radius: 4px;
+  }
+
+  .sb-Header-link {
+    padding: 1rem 1rem;
+    margin: 0 1rem;
+
+    & + & {
+      border-top: 1px solid $contrast-color;
+    }
+  }
+
+  .sb-Header-nav:hover > .sb-Header-links {
+    display: block;
+  }
+}

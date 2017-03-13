@@ -1,0 +1,45 @@
+@import "../variables";
+
+$background-color: #eeeeee;
+$contrast-color: $color-background;
+
+.sb-Footer {
+  padding: 5.5rem $padding-global-min 2.75rem;
+  background: $background-color;
+  border-top: 1px solid $contrast-color;
+  color: $contrast-color;
+}
+
+.sb-Footer-container {
+  display: flex;
+  justify-content: center;
+  max-width: $width-max-wide;
+  margin: 0 auto;
+
+  > * {
+    flex: 1;
+  }
+}
+
+.sb-Footer-links {
+  text-align: right;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sb-Footer-link {
+  & + & {
+    margin-top: 1rem;
+  }
+
+  a {
+    color: $contrast-color;
+  }
+}
+
+.sb-Footer-misc {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}

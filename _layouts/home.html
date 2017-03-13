@@ -1,0 +1,19 @@
+---
+layout: default
+---
+
+<div>
+  {{ content }}
+
+  <ul class="sb-Home-posts">
+    {% for post in site.posts %}
+      <li class="sb-Home-post">
+        <time class="sb-Home-postDate">{{ post.date | date: "%b %-d, %Y" }}</time>
+
+        <h2 class="sb-Home-postTitle">
+          <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+</div>

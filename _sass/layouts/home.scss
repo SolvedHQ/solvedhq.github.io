@@ -1,0 +1,31 @@
+@import "../variables";
+
+.sb-Home-posts {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sb-Home-post {
+  margin: 3rem 0;
+}
+
+.sb-Home-postDate {
+  color: $color-text-muted;
+}
+
+.sb-Home-postTitle {
+  padding-top: 1rem;
+  font-size: 3rem;
+  font-weight: 300;
+
+  > a {
+    color: $color-text;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
